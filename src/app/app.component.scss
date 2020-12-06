@@ -5,15 +5,15 @@ $nav-arrow-height: 50px;
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 
 
-
-body {
-    font-family: "Poppins", sans-serif;
-}
 h1 {
     font-family: "Roboto Slab", serif;
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: 700;
     text-transform: uppercase;
+}
+
+a {
+    color: white;
 }
 
 .decorative-box {
@@ -113,6 +113,30 @@ h1 {
     width: auto;
 }
 
+.lightbox-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.lightbox-thumb-wrapper {
+    margin: 10px;
+    width: 100px;
+    cursor: -moz-zoom-in;
+    cursor: -webkit-zoom-in;
+    cursor: zoom-in;
+}
+
+.section-detector-wrapper {
+    z-index: -9999;
+    height: 100vh;
+}
+.contact-icon {
+    height: 40px;
+}
+.contact-info {
+    font-size: 1.2rem;
+}
 // Extra small devices (portrait phones, less than 576px)
 // No media query since this is the default in Bootstrap
 
@@ -142,8 +166,11 @@ h1 {
     .decorative-box {
         width: 800px;
     }
+    .lightbox-thumb-wrapper {
+        margin: 18px;
+        width: 180px;
+    }
 }
-
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
 }

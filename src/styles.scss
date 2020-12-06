@@ -7,12 +7,24 @@ $body-color: white;
 html {
   scroll-behavior: smooth;
 }
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+}
 
+.navbar-dark .navbar-toggler-icon {
+  background-image: url(assets/img/hamburger-icon.svg);
+}
+.navbar-dark .navbar-toggler {
+  border: none;
+  outline: none;
+}
 .navbar-brand {
   font-weight: bold;
 }
 
-.carousel-control-prev, .carousel-control-next {
+.carousel-control-prev,
+.carousel-control-next {
   top: 25%;
   bottom: 25%;
 }
@@ -20,13 +32,17 @@ html {
 // No media query since this is the default in Bootstrap
 
 // Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {  }
-    
+@media (min-width: 576px) {
+}
+
 // Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {  }
+@media (min-width: 768px) {
+}
 
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px) {  }
+@media (min-width: 992px) {
+}
 
 // Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {  }
+@media (min-width: 1200px) {
+}

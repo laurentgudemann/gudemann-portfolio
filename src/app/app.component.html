@@ -6,20 +6,20 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav navbar-right">
-        <li class="nav-item active">
+      <ul class="navbar-nav navbar-right align-items-center">
+        <li class="nav-item mr-3 active">
           <a class="nav-link" href="#about">About <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item mr-3">
           <a class="nav-link" href="#film">Film</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item mr-3">
           <a class="nav-link" href="#photo">Photo</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item mr-3">
           <a class="nav-link" href="#design">Design</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item mr-3">
           <a class="nav-link" href="#contact">Contact</a>
         </li>
       </ul>
@@ -28,6 +28,7 @@
 
 </nav>
 
+
 <div class="container main-wrapper min-vh-100 align-content-between pt-5">
   <div class="nav-anchor" id="about">
   </div>
@@ -35,7 +36,7 @@
   <div class="navbar-height-spacer"></div>
   <div class="decorative-box"></div>
   <h1 class="text-center text-md-left ml-md-5" (appear)="onAppear(1)">About</h1>
-  <div class="row align-items-center nav-arrow-padding">
+  <div class="row nav-arrow-padding">
     <div class="col-0 col-md-1"></div>
     <div class="col-12 col-md-4 col-lg-3">
       <div class="row justify-content-center">
@@ -44,7 +45,7 @@
       </div>
     </div>
     <div class="col-1 d-none d-sm-block d-xl-none"></div>
-    <div class="col-12 col-md-6">
+    <div class="col-12 col-md-6 align-self-center">
       <p>Hi my name is Laurent and I made this website to collect my favorite things I have worked on and share them
         with
         the internet.</p>
@@ -60,11 +61,12 @@
       <img class="img-fluid nav-arrow mb-5" src="/assets/img/nav-arrow.svg">
     </a>
   </div>
-
 </div>
 
-<div class="w-xl-75 main-wrapper min-vh-100 align-content-between vimeo-wrapper mt-5" appFilmScroll>
-  <div id="film">
+
+<div id="film" class="w-xl-75 main-wrapper min-vh-100 align-content-between vimeo-wrapper mt-5" appFilmScroll>
+  <div class="section-detector-wrapper row position-absolute w-100 justify-content-center align-items-center">
+    <div (appear)="onAppear(2)"></div>
   </div>
   <div class="navbar-height-spacer"></div>
   <div class="d-block d-sm-none">
@@ -103,69 +105,88 @@
   </div>
 
   <div class="row arrow-navigation-wrapper justify-content-center align-items-start">
-    <img class="img-fluid nav-arrow mb-5" src="/assets/img/nav-arrow.svg">
+    <a href="#photo">
+      <img class="img-fluid nav-arrow mb-5" src="/assets/img/nav-arrow.svg">
+    </a>
   </div>
 
 </div>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1 id="photo">This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1 id="design">This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1>This is a heading</h1>
-<h1 id="contact">This is a heading</h1>
+
+
+<div id="photo" class="container main-wrapper min-vh-100 align-content-between mt-5">
+  <div class="section-detector-wrapper row position-absolute w-100 justify-content-center align-items-center">
+    <div (appear)="onAppear(3)"></div>
+  </div>
+  <div class="navbar-height-spacer"></div>
+  <h1 class="text-center text-md-left ml-md-5 mt-5">Photo</h1>
+  <div class="lightbox-wrapper nav-arrow-padding">
+    <div class="lightbox-thumb-wrapper" *ngFor="let image of album; let i=index">
+      <img class="img-fluid" [src]="image.thumb" (click)="open(i)" />
+    </div>
+  </div>
+
+  <div class="row arrow-navigation-wrapper justify-content-center align-items-start">
+    <a href="#design">
+      <img class="img-fluid nav-arrow mb-5" src="/assets/img/nav-arrow.svg">
+    </a>
+  </div>
+
+</div>
+
+
+<div id="design" class="container main-wrapper min-vh-100 align-content-between mt-5">
+  <div class="send-to-back row position-absolute vh-100 w-100 justify-content-center align-items-center">
+    <div (appear)="onAppear(4)"></div>
+  </div>
+  <div class="navbar-height-spacer"></div>
+  <h1 class="text-center text-md-left ml-md-5 mt-5">Design</h1>
+  <div class="row arrow-navigation-wrapper justify-content-center align-items-start">
+    <a href="#contact">
+      <img class="img-fluid nav-arrow mb-5" src="/assets/img/nav-arrow.svg">
+    </a>
+  </div>
+</div>
+
+<div id="contact" class="container main-wrapper min-vh-100 align-content-between mt-5">
+  <div class="send-to-back row position-absolute vh-100 w-100 justify-content-center align-items-center">
+    <div (appear)="onAppear(5)"></div>
+  </div>
+  <div class="navbar-height-spacer"></div>
+  <h1 class="text-center text-md-left ml-md-5 mt-5">Contact</h1>
+  <div class="row mt-5">
+    <div class="col-0 col-md-1"></div>
+    <div class="col-12 col-md-5 mt-0 mt-md-5 mb-5">
+      <a href="mailto:contact@gudemann.com" class="contact-info" target="_blank">
+        <div class="row align-items-center justify-content-center justify-content-md-start mb-4">
+          <img class="contact-icon mr-4" src="/assets/img/email-icon.svg">
+          contact@gudemann.com
+        </div>
+      </a>
+      <a href="https://www.linkedin.com/in/laurent-gudemann/" class="contact-info" target="_blank">
+        <div class="row justify-content-center justify-content-md-start align-items-center">
+          <img class="contact-icon mr-4" src="/assets/img/linkedin-icon.svg">
+          laurent-gudemann
+        </div>
+      </a>
+
+    </div>
+    <div class="col-12 col-md-6">
+      <form action="https://formspree.io/f/mwkwrebd" method="POST">
+        <div class="form-group">
+          <label for="contact-name">Full name</label>
+          <input type="text" name="name" class="form-control" id="contact-name" placeholder="First and last name">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Email address</label>
+          <input type="email" name="_replyto" class="form-control" id="exampleFormControlInput1"
+            placeholder="name@example.com">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Your message</label>
+          <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { NgbCarousel } from '@ng-bootstrap/ng-bootstrap';
+import { Lightbox } from 'ngx-lightbox';
 
 @Component({
   selector: 'app-root',
@@ -17,5 +17,27 @@ export class AppComponent {
   onAppear(elementName) {
     console.log(elementName);
   }
+  album: Array<any> = [];
+  constructor(private _lightbox: Lightbox) {
+    for (let i = 1; i <= 15; i++) {
+      const src = 'assets/img/lightbox/image' + i + '.jpg';
+      const thumb = 'assets/img/lightbox-thumb/image' + i + '.jpg';
+      const album = {
+        src: src,
+        thumb: thumb
+      };
 
+      this.album.push(album);
+    }
+  }
+
+  open(index: number): void {
+    // open lightbox
+    this._lightbox.open(this.album, index);
+  }
+
+  close(): void {
+    // close lightbox programmatically
+    this._lightbox.close();
+  }
 }
